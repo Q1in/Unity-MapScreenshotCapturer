@@ -1,91 +1,59 @@
 # Unity-MapScreenshotCapturer
 
-A free and easy-to-use Unity tool to capture screenshots of multiple maps in your scene.
-Supports optional additional cameras, custom image names per map, particle simulation, and automatically restores the previously active map. Ideal for creating high-quality map previews, level snapshots, or promotional images.
+A free and easy-to-use Unity tool to capture screenshots of multiple maps in your scene. Supports optional additional cameras, custom image names per map, particle simulation, and restores the previously active map. Ideal for map previews, level snapshots, or promotional images.
 
 ---
 
 ## Features
 
-* Capture multiple maps in your Unity scene.
-* Assign optional additional cameras per map for multiple angles.
-* Custom image names for default and additional cameras.
-* Particle system simulation ensures effects are visible in screenshots.
-* Automatically restores the previously active map.
-* Saves screenshots in a specified folder inside `Assets`.
-* Fully free and open-source for any project.
+- Capture multiple maps with optional additional cameras.
+- Custom image names per camera.
+- Particle simulation included for accurate screenshots.
+- Automatically restores active map and hidden objects.
+- Saves screenshots in a specified folder inside `Assets`.
+- Free and open-source.
 
 ---
 
 ## Installation
 
-1. Download or clone this repository:
+1. Clone or download the repository:
 
 ```bash
 git clone https://github.com/Q1in/Unity-MapScreenshotCapturer.git
 ```
 
-2. Copy the `MapScreenshotCapturer.cs` script into your Unity project `Scripts` folder (or any folder you prefer).
+2. Copy `MapScreenshotCapturer.cs` into your Unity project `Scripts` folder.
 
-3. Open your Unity project and attach the script to an empty GameObject in your scene.
+3. Attach the script to an empty GameObject in your scene.
 
 ---
 
 ## Usage
 
-1. **Assign the Default Camera**
-   Drag a Camera into the `Capture Camera` field in the Inspector. This camera will be used to capture each map by default.
+1. **Assign Cameras**  
+   Assign cameras that point directly at the map or area you want to capture, not just the default scene camera. The default camera field is used for each map unless overridden by additional cameras.
 
-2. **Add Maps**
+2. **Add Maps**  
+   Add each map GameObject to the `Maps` list. Optionally assign additional cameras and custom image names. If names are left empty, screenshots will use automatic naming (`Map_1.png`, `Map_1_1.png`, etc.).
 
-   * In the `Maps` list, add each map GameObject you want to capture.
-   * For each map:
+3. **Objects to Hide**  
+   Add any objects to hide during capture, such as UI or props.
 
-     * You can assign optional additional cameras in the `Additional Cameras` list.
-     * Optionally set custom image names for both the default and additional cameras.
-       *(If left empty, the script will use automatic naming: `Map_1.png`, `Map_1_1.png`, `Map_1_2.png`, etc.)*
+4. **Screenshot Settings**  
+   Specify the `Folder Location` in `Assets` and the desired resolution.
 
-3. **Objects to Hide**
-   Add any objects that should be hidden while capturing screenshots (e.g., UI elements, props, or decorative objects).
+5. **Capture Screenshots**  
+   Right-click the MapScreenshotCapturer component in the Inspector and select **Capture Maps**. Screenshots will be saved to the chosen folder.
 
-4. **Screenshot Settings**
-
-   * `Folder Location`: specify the folder inside `Assets` where screenshots will be saved.
-   * `Resolution Width` & `Resolution Height`: set your desired screenshot dimensions.
-
-5. **Capture Screenshots**
-
-   * In the Inspector, right-click on the MapScreenshotCapturer component (gear icon on the top-right of the component).
-   * Select **Capture Maps** from the context menu.
-   * The script will capture screenshots for all maps, including additional cameras, and save them to the specified folder.
-
-6. **Restoring Scene**
-
-   * The script automatically restores the map that was active before capturing.
-   * All hidden objects will also be restored.
-
----
-
-## Example Naming
-
-* Default camera: `Map_1.png`, `Map_2.png`, …
-* Additional cameras: `Map_1_1.png`, `Map_1_2.png`, …
-* Custom names: e.g., `LevelA_Main.png`, `LevelA_Side.png`, …
-
----
-
-## Notes
-
-* Particle effects are simulated for one frame so that they appear correctly in screenshots.
-* Works in both Editor and Play mode.
-* Fully free to use and modify for personal or commercial projects.
-* Make sure the cameras have the correct settings (field of view, position, etc.) for the desired screenshot result.
+6. **Scene Restoration**  
+   The script restores the map that was active before capture and unhides any hidden objects.
 
 ---
 
 ## License
 
-This project is **MIT Licensed** — you can use, modify, and distribute it freely.
+MIT License — free to use, modify, and distribute.
 
 ---
 
