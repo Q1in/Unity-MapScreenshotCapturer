@@ -22,7 +22,7 @@ Supports optional additional cameras, custom image names per map, particle simul
 1. Download or clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/Unity-MapScreenshotCapturer.git
+git clone https://github.com/Q1in/Unity-MapScreenshotCapturer.git
 ```
 
 2. Copy the `MapScreenshotCapturer.cs` script into your Unity project `Scripts` folder (or any folder you prefer).
@@ -91,4 +91,7 @@ This project is **MIT Licensed** — you can use, modify, and distribute it free
 
 ## Screenshots
 
-*(Add your example screenshots here to show captured results.)*
+<img width="385" height="1031" alt="image" src="https://github.com/user-attachments/assets/8c730bdb-757b-4b3f-9565-25012fb6dfc3" />
+<img width="802" height="148" alt="image" src="https://github.com/user-attachments/assets/aeb5ec97-1572-4a6d-a547-9871e6af3f5d" />
+
+
